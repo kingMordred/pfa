@@ -108,7 +108,10 @@ public class MainActivity extends AppCompatActivity {
                 ArrayList<String> data = results.getStringArrayList(spch.RESULTS_RECOGNITION);
 
                 edttxt.setText(data.get(0));
-                reff.setValue(data.get(0));
+                if(data.get(0).equals("light on"))
+                reff2.setValue("1");
+                else
+                    reff2.setValue("0");
 
             }
 
